@@ -8,9 +8,10 @@ const { calculatePayouts } = require('./payoutService');
 
 const app = express();
 
-app.use(cors());
-app.use(helmet());
-app.use(bodyParser.json());
+// Middleware setup
+app.use(cors()); // Enable COR
+app.use(helmet()); // Set security headers
+app.use(bodyParser.json()); // Parse JSON bodies
 
 const limiter = rateLimit({
   windowMs: 15 * 60 * 1000, // 15 minutes
