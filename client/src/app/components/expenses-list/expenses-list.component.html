@@ -1,0 +1,30 @@
+<app-expense-form (expenseAdded)="addExpense($event)"></app-expense-form>
+
+<div class="outter-container">
+  <div class="expenses-container">
+    <h2 class="title" >Expenses</h2>
+    <ul class="expense-ul">
+      <li class="expense-list" *ngFor="let expense of expenses">
+        {{ expense.name }}: {{ expense.amount | currency }}
+      </li>
+    </ul>
+    <div class="settle-up-button-container">
+      <button class="settle-up-button" (click)="settleUp()">Settle Up</button>
+    </div>
+    <br>
+    <h2 class="title">Payouts</h2>
+    <div *ngIf="payouts">
+      <p class="payout-para">Total: {{ payouts.total | currency }}</p>
+      <p class="payout-para">Equal Share: {{ payouts.equalShare | currency }}</p>
+      <ul class="payout-ul">
+        <li class="expense-list" *ngFor="let payout of payouts.payouts">
+          {{ payout.owes }} owes {{ payout.owed }}: {{ payout.amount | currency }}
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div>
+    
+  </div>
+</div>

@@ -1,0 +1,59 @@
+.outter-container{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    /* background-color: blueviolet; */
+}
+
+.expenses-container{
+    background-color: #1C1D29;
+    /* margin-top: 150px; */
+    border-radius: 10px;
+    /* min-height: 300px; */
+    max-width: 500px;
+    width: 100%;
+    padding: 18px 20px;
+}
+
+.settle-up-button{
+    color: white;
+    border: none;
+    border-radius: 50px;
+    width: 400px;
+    height: 40px;
+    background-color: #034DE5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.expense-ul{
+    margin-bottom: 20px;
+}
+
+.expense-list{
+    list-style: none;
+    color: #98999a;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.title{
+    color: #98999a;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom: 10px;
+    font-weight: 300;
+}
+
+.settle-up-button-container{
+    display: grid;
+    place-items: center;
+}
+
+.payout-para{
+    color: #98999a;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.payout-ul{
+    margin-top: 30px;
+}

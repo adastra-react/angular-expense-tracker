@@ -1,0 +1,76 @@
+.outter-container{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    /* background-color: blueviolet; */
+}
+
+.input-container{
+    display: flex;
+    flex-direction: column;
+    /* background-color: beige; */
+    width: 100%;
+}
+
+.expense-form{
+    background-color: #1C1D29;
+    margin-top: 150px;
+    border-radius: 10px;
+    
+    /* min-height: 300px; */
+    max-width: 500px;
+    width: 100%;
+    padding: 18px 20px;
+}
+
+.expense-input-label{
+    color: #98999a;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom: 10px;
+}
+
+.expense-input{
+    display: flex;
+    align-items: center;
+    /* margin-top: 10px; */
+    height: 50px;
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid #2F303B;
+    background-color: #111419;
+    color: aliceblue;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.expense-input input {
+    flex: 1;
+    margin-left: 30px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 4px;
+  }
+
+.expense-input::placeholder {
+    font-style: italic;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: 20px;
+}
+
+.expense-button-container{
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.add-expense-button{
+    color: white;
+    border: none;
+    border-radius: 50px;
+    width: 400px;
+    height: 40px;
+    background-color: #034DE5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
