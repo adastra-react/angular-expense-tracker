@@ -1,0 +1,32 @@
+<div class="outter-container">
+  <form class="expense-form" (ngSubmit)="addExpense()" #expenseForm="ngForm">
+    <div class="input-container">
+      <label class="expense-input-label" for="name">Name</label>
+      <input 
+        class="expense-input" 
+        placeholder="Name"
+        type="text" 
+        id="name" 
+        [(ngModel)]="name" 
+        name="name" 
+        required
+      >
+    </div>
+    <div class="input-container">
+      <label class="expense-input-label" for="amount">Amount</label>
+      <input
+       placeholder="Amount"
+       class="expense-input" 
+       type="number" 
+       id="amount" 
+       [(ngModel)]="amount" 
+       name="amount" 
+       required
+      >
+    </div>
+    <div class="expense-button-container">
+      <button class="add-expense-button" type="submit">Add Expense</button>
+    </div>
+</form>
+</div>
+  
