@@ -9,8 +9,12 @@
         id="name" 
         [(ngModel)]="name" 
         name="name" 
-        required
+        #nameInput="ngModel" 
       >
+      <!-- Display error message if the name input is invalid -->
+      <div *ngIf="nameInput.invalid && (nameInput.dirty || nameInput.touched)" class="error-message">
+        Name is required
+      </div>
     </div>
     <div class="input-container">
       <label class="expense-input-label" for="amount">Amount</label>
@@ -21,12 +25,16 @@
        id="amount" 
        [(ngModel)]="amount" 
        name="amount" 
-       required
+       #amountInput="ngModel"
       >
+      <!-- Display error message if the amount input is invalid -->
+      <div *ngIf="amountInput.invalid && (amountInput.dirty || amountInput.touched)" class="error-message">
+        Amount should be a number
+      </div>
     </div>
     <div class="expense-button-container">
-      <button class="add-expense-button" type="submit">Add Expense</button>
+      <button class="add-expense-button" type="submit" [disabled]="expenseForm.invalid">Add Expense</button>
+      <!-- Disable the button if the form is invalid -->
     </div>
-</form>
+  </form>
 </div>
-  
